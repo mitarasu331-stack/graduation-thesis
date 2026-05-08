@@ -248,24 +248,34 @@ https://fromkato.com/webdev/css/properties/font-family*/
 /* --- スマホ用設定（画面幅が768px以下のとき） --- */
 @media (max-width: 768px) {
 
-    /* 1. 会社概要の横並びを解除して縦に並べる */
-    .information-box {
+     .information-box {
         flex-direction: column;
-        /* 縦並び */
+        /* 縦並びに変更 */
         align-items: center;
-        /* 中央寄せ */
-        gap: 20px;
+        gap: 30px;
     }
 
-    /* 2. 写真の幅をスマホに合わせる */
-    .photo-area {
+  .photo-area {
+        width: 60%; /* 90%から60%へ。これでかなりスッキリします */
+        max-width: 250px; /* 最大でも250pxまでに制限 */
+        margin: 0 auto 10px; /* 下の余白を少し詰める */
+        order: -1; /* 写真を上に配置 */
+    }
+
+    .photo-area img {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 影も少し控えめにして軽やかに */
+    }
+    /* 3. 表の項目名と内容を縦にする（狭い画面でも読みやすくする） */
+    .company-profile th,
+    .company-profile td {
+        display: block;
+        /* 横並びを解除して縦にする */
         width: 100%;
         /* 横幅いっぱい */
-        max-width: 400px;
-        /* 大きくなりすぎないように制限 */
-        order: -1;
-        /* 写真を上に持ってくる（お好みで消してOK） */
+        padding: 10px;
+        /* 余白を少し詰める */
     }
+
 
     /* 3. 表の項目名と内容を縦にする（狭い画面でも読みやすくする） */
     .company-profile th,
