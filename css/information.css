@@ -299,18 +299,26 @@ https://fromkato.com/webdev/css/properties/font-family*/
         /* 枠内の余白を少し詰める */
     }
 
-    .concept-inner h2 {
-        font-size: 130%;
-        /* キャッチコピーを画面に収まるサイズに */
+  /* 企業理念のメインタイトルと同じサイズに統一 */
+    .concept-inner h2,
+    .greetings-inner h2 {
+        font-size: 16px !important; /* ここを同じ数字にします */
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+        display: inline-block;
     }
 
-    .concept-body p {
-        font-size: 14px;
-        /* 本文を少し小さく */
-        line-height: 1.8;
-        /* 行間も少し詰める */
-        text-align: justify;
-        /* 端を揃えて読みやすく */
+    /* 代表挨拶の「代表取締役」などの肩書き */
+    .greetings-inner h3 {
+        font-size: 13px !important; /* 本文と同じくらいのサイズに */
+        margin-bottom: 5px !important;
+    }
+
+    /* 本文の文字サイズも統一 */
+    .concept-body p,
+    .greetings-body p {
+        font-size: 13px !important;
+        line-height: 1.8 !important;
     }
 
     /* 5. 地図の高さを抑える */
