@@ -1,0 +1,235 @@
+ @charset "UTF-8";
+
+ .footer {
+     background-color: #333333;
+     /*背景色*/
+     color: #FFFFFF;
+     /*文字色*/
+     padding: 60px 20px 30px;
+ }
+
+ .footer-inner {
+     max-width: none;
+     height: 300px;
+     margin: 0;
+     /*中央寄せなし*/
+     width: 100%;
+     /*横幅100％*/
+
+
+
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     gap: 40px;
+
+     padding: auto;
+ }
+
+ .footer-info {
+     flex: 0 0 30%;
+ }
+
+ /* ロゴ */
+ .footer-logo img {
+
+     max-width: 200px;
+     height: auto;
+     display: block;
+     margin-bottom: 0;
+     padding-left: 40px;
+     /* 元のロゴが黒い場合、白く反転させる命令 */
+     /* filter: brightness(0) invert(1); 見えなくなった*/
+ }
+
+ /* 住所 */
+ .footer-address {
+     font-style: italic;
+     /*斜体*/
+     font-size: 20px;
+     line-height: 1.8;
+     padding-left: 40px;
+ }
+
+ /* 中央 */
+ .footer-navi {
+     flex: 0 0 20%;
+ }
+
+ /* footer.css の @media 内にある .nav-list を修正 */
+ .nav-list {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     /* center から flex-start に変更 */
+     gap: 10px 10%;
+     /* 左右の隙間をパーセントで指定 */
+     padding: 0 5%;
+     /* 全体を少し内側に寄せる */
+ }
+
+ .nav-list li {
+     width: 45%;
+     text-align: left;
+     /* 左寄せにする */
+ }
+
+ .nav-list a {
+
+     color: #ffffff;
+     text-decoration: none;
+     /* 下線を消す */
+     font-size: 18px;
+     /* 色を変える速度 */
+     transition: 0.3s;
+ }
+
+ /* リスト */
+ .nav-list a:hover {
+     text-decoration: underline;
+     /* マウスを乗せたら下線を出す→選んでるものがわかりやすい */
+     opacity: 0.7;
+ }
+
+ /* Googleマップ */
+ .footer-map {
+     flex: 1.5;
+     height: 120px;
+     min-width: 0;
+     margin-top: 0;
+     padding-top: 0;
+
+ }
+
+ /* マップの調整 */
+ .footer-map iframe {
+     width: 100%;
+     height: auto;
+     aspect-ratio: 7/3;
+
+     border: 0;
+     border-radius: 12px;
+     /* 角を少し丸くする */
+ }
+
+ /* 一番下のコピーライト（日関運送株式会社） */
+ .footer>p:last-child {
+     text-align: center;
+     font-size: 20px;
+     margin-top: 65px;
+     padding-top: 20px;
+     border-top: 1px solid rgba(255, 255, 255, 0.2);
+     /* 細い境界線 */
+     color: #cccccc;
+ }
+
+
+ /*フッターが浮いて白い部分が見えないようにする*/
+ /*参照：https://qiita.com/laddge/items/a584beafed3195b966b5 */
+
+ html,
+ body {
+     height: 100%;
+ }
+
+ footer {
+     position: sticky;
+     top: 100vh;
+     top: 100dvh;
+ }
+
+
+
+ /* --- スマホの見え方調整--- */
+ @media (max-width: 768px) {
+     .footer-inner {
+         flex-direction: column;
+         /* 縦に並べる */
+         height: auto;
+         /* 高さを自動、はみ出しを防ぐ */
+         align-items: center;
+         /* 中央揃え */
+         gap: 20px;
+         /* 要素同士の間隔 */
+         padding: 0;
+     }
+
+     .footer-info,
+     .footer-navi,
+     .footer-map {
+         flex: none;
+         /* PC用の幅指定を解除 */
+         width: 100%;
+         /* 横幅いっぱいにする */
+     }
+
+     /* ロゴと住所の余白をリセット */
+     .footer-logo img,
+     .footer-address {
+         padding-left: 0;
+         margin: 0 auto;
+         text-align: center;
+     }
+
+     .footer-logo img {
+         max-width: 130px;
+         /* スマホではロゴを少し小さく */
+     }
+
+     /*中央に寄せる */
+     .footer-navi {
+         display: flex;
+         justify-content: center;
+         /* 2つのリストを中央に寄せる */
+         width: 100%;
+         max-width: 320px;
+         /* 横に広がりすぎないよう制限 */
+         margin: 0 auto;
+         /* 全体を中央寄せ */
+         gap: 0;
+         /* gapを一度0にして、liの幅で制御 */
+     }
+
+     .nav-list {
+         flex: 1;
+         /* 左右のリストを同じ幅（50%ずつ）にする */
+         padding: 0;
+         margin: 0;
+         list-style: none;
+     }
+
+     .nav-list li {
+         width: 100%;
+         text-align: left;
+         /* 文字は左寄せ */
+         margin-bottom: 15px;
+         padding-left: 10px;
+         /* 少しだけ内側に余白を入れる */
+     }
+
+     .nav-list a {
+         font-size: 14px;
+         /* お問い合わせが2行にならないよう少し小さめに */
+         white-space: nowrap;
+         /* ★文字を途中で改行させない */
+         color: #fff;
+         text-decoration: none;
+     }
+
+     /* マップの調整 */
+     .footer-map {
+         height: auto;
+         /* 高さを自動に */
+     }
+
+     .footer-map iframe {
+         aspect-ratio: 16 / 9;
+         /*mapno比率 */
+     }
+
+     /* コピーライトの上の余白を調整 */
+     .footer>p:last-child {
+         margin-top: 20px;
+         font-size: 14px;
+     }
+ }
