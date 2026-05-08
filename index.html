@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- トップ画面のHTML -->
+
+<head>
+    <!--
+    タグの参考
+     https://www.bold.ne.jp/engineer-club/html-tag
+      -->
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日関運送株式会社</title>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/require.css">
+    <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/notice.css">
+
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img src="Photo/logo.png" alt="NISSEKI">
+                </a>
+                <h1 class="site-title">日関運送株式会社</h1>
+            </div>
+            <input type="checkbox" id="nav-input" class="nav-unshown">
+
+            <label for="nav-input" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="business.html">事業内容</a></li>
+                    <li><a href="information.html">会社案内</a></li>
+                    <li><a href="notice.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- //ヘッダー -->
+
+    <!-- メイン -->
+    <main>
+        <div class="main-img">
+            <img src="Photo/topimg.jpg" alt="トラックの写真">
+        </div>
+        <section class="concept-section">
+            <div style="background:#eeeeee; padding:10px 15px; color: #333;;">
+                <div class="concept-inner">
+                    <p class="label">CONCEPT</p>
+                    <div class="line"></div>
+                    <h2>若い力で、物流の未来を切り拓く。</h2>
+                    <a href="information.html#concept" class="view-more">もっと見る</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="business">
+            <div style="background:#eeeeee; padding:10px 15px; color: #333;;">
+                <div class="business-inner">
+                    <p class="label">BUSINESS</p>
+                    <div class="line"></div>
+                    <h2>事業内容</h2>
+                    <div class="image-container">
+                        <div class="business-card">
+                            <a href="business.html#1">
+                                <img src="Photo/ban.jpg" alt="貨物軽自動車運送事業">
+                                <div class="business-text">貨物軽自動車運送事業</div>
+                            </a>
+                        </div>
+
+                        <div class="business-card">
+                            <a href="business.html#2">
+                                <img src="Photo/track.jpg" alt="一般貨物自動車運送事業">
+                                <div class="business-text">一般貨物自動車運送事業</div>
+                            </a>
+                        </div>
+
+                        <div class="business-card">
+                            <a href="business.html#3">
+                                <img src="Photo/stockroom.jpg" alt="まるごと物流サポート">
+                                <div class="business-text">まるごと物流サポート</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="business.html" class="view-more">もっと見る</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="notice">
+            <div style="background:#ffffff; padding:80px 15px;">
+                <div class="notice-inner">
+                    <p class="label">NOTICE</p>
+                    <div class="line"></div>
+                    <h2>お知らせ</h2>
+
+                    <!-- お知らせ内容が入ったらここに入れる -->
+                    <section class="notice-container">
+                        <div class="notice-flex-list">
+
+                            <a href="recruit.html" class="notice-item-link">
+                                <div class="photo-square">
+                                    <img src="Photo/recruit.jpg" alt="求人情報の画像">
+                                </div>
+                                <div class="notice-recruit-text">若手活躍中!未経験OKの運送スタッフ募集</div>
+                                <time datetime="2024-05-01">2024年5月1日</time>
+                            </a>
+
+                        </div>
+                    </section>
+
+                    <a href="notice.html" class="view-more">もっと見る</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <!-- 参照（囲い枠）
+https://yunico-fluffylife.com/entry/box-design2 
+-->
+            <div style="background:#E5DCD7; padding:10px 15px; color:#000000;">
+                <div class="contact-inner">
+                    <p class="label">CONTACT</p>
+                    <div class="line"></div>
+                    <h2>お問い合わせ</h2>
+
+                    <!-- お問い合わせページに飛ばす -->
+
+
+                    <a href="contact.html" class="contact-form">お問い合わせフォーム</a>
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <!-- //メイン -->
+
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <!-- アイコンの挿入 -->
+                    <a href="index.html" class="logo-link">
+                        <img src="Photo/logo.png" alt="NISSEKI">
+                    </a>
+                </div>
+                <p class="footer-address">
+                    <!-- 住所の表示 -->
+                    〒510-8003<br>
+                    三重県四日市市住吉町13番5号
+                </p>
+            </div>
+
+            <nav class="footer-navi">
+                <ul class="nav-list">
+                    <!-- ページの遷移 -->
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="business.html">事業内容</a></li>
+                    <li><a href="information.html">会社案内</a></li>
+                </ul>
+                <ul class="nav-list">
+                    <li><a href="notice.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="footer-map">
+                <!-- Googleマップの埋め込み -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.8679087005225!2d136.66161447645663!3d35.01001157281129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038f8c44aa18dd%3A0xc66ca010f816c299!2z44CSNTEwLTgwMDMg5LiJ6YeN55yM5Zub5pel5biC5biC5L2P5ZCJ55S677yR77yT4oiS77yV!5e0!3m2!1sja!2sjp!4v1776410528338!5m2!1sja!2sjp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <p>&copy; 2026 日関運送株式会社</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- //フッター -->
+</body>
+
+</html>
