@@ -169,7 +169,7 @@ https://fromkato.com/webdev/css/properties/font-family*/
 
 }
 
-.greethings-inner h2 {
+.greetings-inner h2 {
     text-align: right;
     font-size: 250%;
     font-family: 'Times New Roman', Times, serif;
@@ -317,4 +317,24 @@ https://fromkato.com/webdev/css/properties/font-family*/
     .map-container iframe {
         height: 300px;
     }
+
+    .greetings-body {
+        padding: 40px 20px; /* 余白を狭くする */
+    }
+
+    .greetings-body p {
+        font-size: 15px; /* 文字を少し小さく */
+        line-height: 1.8;
+        text-align: justify; /* 両端揃えで読みやすく */
+    }
+
+    .greetings-inner {
+        text-align: center; /* スマホでは名前を中央寄せにするとバランスが良いです */
+        margin-top: 20px;
+    }
+
+    .greetings-inner h2 {
+        font-size: 160%; /* 名前を画面幅に合わせる */
+    }
+
 }
