@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+
+
+
+/* 「CONCEPT」ラベル */
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    /* 文字の間隔を広げru */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 中央の線 */
+.line {
+    width: 60px;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto 30px;
+    /* 中央に配置し、下に余白 */
+}
+
+
+/* --------------------------------------------------
+   募集要項エリアのスタイル
+   -------------------------------------------------- */
+
+/* 見出し部分 */
+.headline-text {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #333;
+    position: relative;
+}
+
+.headline-text::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #E5DCD7;
+    margin: 10px auto 0;
+}
+
+/* 情報ボックス（画像とテーブルのレイアウト用） */
+.information-box {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .information-box {
+        flex-direction: row; /* 画像とテーブルを横並びにする場合 */
+        align-items: flex-start;
+    }
+}
+
+/* テーブルスタイル */
+.company-profile {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.company-profile th,
+.company-profile td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.company-profile th {
+    width: 30%;
+    background-color: #f8f6f4; /* サイト全体のトーンに合わせた薄い背景色 */
+    color: #333;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.company-profile td {
+    width: 70%;
+    line-height: 1.6;
+}
+
+/* お問い合わせ */
+.contact {
+    text-align: center;
+    /* ★事業内容との間に余白を作る */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: inline-block;
+    background-color: transparent;
+    /*背景透明*/
+    color: #333333;
+    padding: 15px 80px;
+    border: 2px solid #333333;
+    text-decoration: none;
+    border-radius: 4px;
+    /*角を丸くしすぎない*/
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+    background-color: #333333;
+    color: #ffffff;
+    transform: translateY(-3px);
+    /* 少し浮き上がる演出 */
+}

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* --- プライバシーポリシー全体の囲み枠 --- */
+.pxrivacy-container {
+    max-width: 800px;         /* 読みやすいように横幅を制限 */
+    margin: 40px auto 80px;   /* 上下に余白を作り、左右中央寄せ */
+    padding: 40px;            /* 内側の余白 */
+    background-color: #ffffff; /* 背景を白にしてスッキリ見せる */
+    border: 1px solid #e0e0e0; /* 控えめな外枠の線 */
+    border-radius: 8px;       /* 角を少し丸くする */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ほんのり影をつけて立体感 */
+}
+
+/* 本文の文字デザイン */
+.pxrivacy-container p {
+    color: #333333;           /* 濃いグレーで目に優しい色に */
+    font-size: 16px;          /* 標準的な読みやすい文字サイズ */
+    line-height: 2.0;         /* 行間を広げて視認性をアップ */
+    letter-spacing: 0.05em;   /* 文字の横の隙間を少しあける */
+    margin: 0;
+}
+
+/* ページタイトルのデザイン（お好みで調整してください） */
+.headline-text {
+    /* background-color: #E5DCD7;  */
+    text-align: center;
+    padding: 40px 15px;
+    margin-bottom: 20px;
+}
+
+.headline-text h2 {
+    font-size: 28px;
+    color: #333333;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* タイトルの下に会社のテーマカラーの線を引く場合 */
+.headline-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #333333; /* 線の色（ロゴやヘッダーに合わせる） */
+}
+
+@media (max-width: 768px) {
+    .pxrivacy-container {
+        margin: 20px 15px 60px; /* 左右に少し画面の余白を作る */
+        padding: 25px 20px;     /* 内側の余白をスマホ用に少し狭める */
+    }
+    
+    .pxrivacy-container p {
+        font-size: 14px;        /* スマホでは文字を少し小さく */
+        line-height: 1.8;       /* 行間もスマホ最適化 */
+    }
+}

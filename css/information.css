@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+.information-box {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+
+/* アンダーライン
+https://runourai.com/ja-jp/html/underline/
+フォントの種類選び
+https://fromkato.com/webdev/css/properties/font-family*/
+/* --- 見出しのデザイン（全ページ統一スタイル） --- */
+.headline-text {
+    font-size: 28px;
+    /* 180%から調整：他のページと合わせるならpx指定が確実です */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin: 60px 0 40px;
+    /* 上下の余白 */
+    position: relative;
+    padding-bottom: 15px;
+    text-decoration: none;
+    /* もともとの下線を消す */
+}
+
+/* 中央の短い線 */
+.headline-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    /* 線の長さ */
+    height: 4px;
+    /* 線の太さ */
+    background-color: #E5DCD7;
+    /* 線の色（事業内容ページと合わせるなら #E5DCD7 でもOK） */
+}
+
+.company-profile {
+    flex: 1;
+    width: 100%;
+    min-width: 300px;
+    max-width: 800px;
+    /*広がらせる限界値*/
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 列ごとに線を引く */
+.company-profile tr {
+    border-bottom: 1px solid #bebcbc;
+}
+
+/* 列、行についての調整 */
+.company-profile th,
+.company-profile td {
+    padding: 20px 10px;
+    /*余白の調整*/
+    text-align: left;
+    /*leftかcenterか後で調整確認！！*/
+    vertical-align: top;
+}
+
+.company-profile th {
+    width: 25%;
+    font-weight: bold;
+    color: #333333;
+}
+
+.company-profile td {
+    color: #333333;
+    line-height: 1.6;
+}
+
+
+.photo-area {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.photo-area img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 地図 */
+.map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.map-container iframe {
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0, 1);
+}
+
+
+.concept-section {
+
+    text-align: center;
+    margin-bottom: auto
+}
+
+/* 囲み枠https://saruwakakun.com/html-css/reference/box */
+.concept-body {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px 40px;
+    color: #333;
+    border-radius: 2px;
+    background: #e8e7e7;
+    box-sizing: border-box;
+
+}
+
+.concept-inner h2 {
+    font-size: 250%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #aaa8a8;
+    padding-bottom: 5px;
+}
+
+/**下線をマーカのようにひくバージョン
+.concept-inner h2 {
+    font-size: 200%;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(transparent 70%, #dcdcdc 70%);
+    padding: 0 5px;
+} */
+.concept-body p {
+    line-height: 2.2;
+    margin: 0;
+    text-align: center;
+}
+
+
+.greetings-section {
+    text-align: right;
+    margin-bottom: auto;
+}
+
+/* 囲み枠https://saruwakakun.com/html-css/reference/box */
+.greetings-body {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px 40px;
+    color: #333333;
+    border-radius: 2px;
+    background: #efe9e7;
+    /*#e8e7e7　色を統一させるか変えるか*/
+    box-sizing: border-box;
+
+}
+
+.greetings-inner h2 {
+    text-align: right;
+    font-size: 250%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.greethings-inner h3 {
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+/**下線をマーカのようにひくバージョン
+.concept-inner h2 {
+    font-size: 200%;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(transparent 70%, #dcdcdc 70%);
+    padding: 0 5px;
+} */
+.greetings-body p {
+    line-height: 2.2;
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* お問い合わせ */
+.contact {
+    text-align: center;
+    /* ★事業内容との間に余白を作る */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: inline-block;
+    background-color: transparent;
+    /*背景透明*/
+    color: #333333;
+    padding: 15px 80px;
+    border: 2px solid #333333;
+    text-decoration: none;
+    border-radius: 4px;
+    /*角を丸くしすぎない*/
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+    background-color: #333333;
+    color: #ffffff;
+    transform: translateY(-3px);
+    /* 少し浮き上がる演出 */
+}
+
+
+/* --- スマホ用設定（画面幅が768px以下のとき） --- */
+@media (max-width: 768px) {
+    .information-box {
+        flex-direction: column;
+        /* 縦並びに変更 */
+        align-items: center;
+        gap: 30px;
+    }
+
+  .photo-area {
+        width: 60%; /* 90%から60%へ。これでかなりスッキリします */
+        max-width: 250px; /* 最大でも250pxまでに制限 */
+        margin: 0 auto 10px; /* 下の余白を少し詰める */
+        order: -1; /* 写真を上に配置 */
+    }
+
+    .photo-area img {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 影も少し控えめにして軽やかに */
+    }
+    /* 3. 表の項目名と内容を縦にする（狭い画面でも読みやすくする） */
+    .company-profile th,
+    .company-profile td {
+        display: block;
+        /* 横並びを解除して縦にする */
+        width: 100%;
+        /* 横幅いっぱい */
+        padding: 10px;
+        /* 余白を少し詰める */
+    }
+
+    .company-profile th {
+        border-bottom: none;
+        /* 項目名の下の線はいらない */
+        padding-bottom: 0;
+        /* 内容との距離を詰める */
+        color: #666;
+        /* 少し薄くして「ラベル」感を出す */
+    }
+
+    /* 4. 企業理念の文字サイズ調整 */
+    .headline-text {
+        font-size: 150%;
+        /* 見出しを少し小さく */
+        margin-top: 40px;
+    }
+
+    .concept-body {
+        padding: 40px 20px;
+        /* 枠内の余白を少し詰める */
+    }
+
+    /* 企業理念のメインタイトルと同じサイズに統一 */
+    .concept-inner h2,
+    .greetings-inner h2 {
+        font-size: 16px !important;
+        /* ここを同じ数字にします */
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+        display: inline-block;
+    }
+
+    /* 代表挨拶の「代表取締役」などの肩書き */
+    .greetings-inner h3 {
+        font-size: 13px !important;
+        /* 本文と同じくらいのサイズに */
+        margin-bottom: 5px !important;
+    }
+
+    /* 本文の文字サイズも統一 */
+    .concept-body p,
+    .greetings-body p {
+        font-size: 13px !important;
+        line-height: 1.8 !important;
+    }
+
+    /* 5. 地図の高さを抑える */
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .greetings-body {
+        padding: 40px 20px;
+        /* 余白を狭くする */
+    }
+
+    .greetings-body p {
+        font-size: 15px;
+        /* 文字を少し小さく */
+        line-height: 1.8;
+        text-align: justify;
+        /* 両端揃えで読みやすく */
+    }
+
+    .greetings-inner {
+        text-align: center;
+        /* スマホでは名前を中央寄せにするとバランスが良いです */
+        margin-top: 20px;
+    }
+
+    .greetings-inner h2 {
+        font-size: 160%;
+        /* 名前を画面幅に合わせる */
+    }
+
+}
