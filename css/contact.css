@@ -15,10 +15,20 @@ form {
 h2 {
     text-align: center;
     color: #333333;
-    margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 28px;       /* 少し大きくして存在感を出す */
+    font-weight: bold;     /* しっかりした太字にする */
+    margin-top: 40px;      /* ヘッダーとの間に心地よい隙間を作る */
+    margin-bottom: 15px;   /* 下の注意書きとの隙間 */
 }
 
+/* 注意書き（h4）のスタイル */
+h4 {
+    text-align: center;
+    color: #6c757d;        /* 真っ黒ではなく、少し優しいグレー（#6c757d）にする */
+    font-size: 14px;       /* タイトルより一回り小さくしてスッキリさせる */
+    font-weight: normal;   /* 文字の太さを通常にしてすっきり見せる */
+    margin-bottom: 40px;   /* 下の白いフォームの箱との間にしっかり余白を作る */
+}
 /* 項目のラベル（会社名、氏名など） */
 label {
     display: block;
